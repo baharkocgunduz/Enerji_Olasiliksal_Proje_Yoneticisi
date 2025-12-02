@@ -1,0 +1,9 @@
+{
+    "hedefler" : [
+
+        {"id" : "hedef1", "konum_x" : 7, "konum_y" : 4, "konum_z" : 6, "deger" : 2, "basari_olasiligi" : 0.5,"skor" :"", "mesafe" :""},
+        {"id" : "hedef2", "konum_x" : 6, "konum_y" : 0, "konum_z" : -5, "deger" : 3, "basari_olasiligi" : 1.0,"skor" :"", "mesafe" :""},
+        {"id" : "hedef3", "konum_x" : -3, "konum_y" : 5, "konum_z" : 11, "deger" : 1, "basari_olasiligi" : 1.5, "skor" :"", "mesafe" :""}
+
+    ]
+}
