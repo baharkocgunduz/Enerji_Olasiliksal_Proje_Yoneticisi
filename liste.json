@@ -1,9 +1,14 @@
 {
-    "hedefler" : [
-
-        {"id" : "hedef1", "konum_x" : 7, "konum_y" : 4, "konum_z" : 6, "deger" : 2, "basari_olasiligi" : 0.5,"skor" :"", "mesafe" :""},
-        {"id" : "hedef2", "konum_x" : 6, "konum_y" : 0, "konum_z" : -5, "deger" : 3, "basari_olasiligi" : 1.0,"skor" :"", "mesafe" :""},
-        {"id" : "hedef3", "konum_x" : -3, "konum_y" : 5, "konum_z" : 11, "deger" : 1, "basari_olasiligi" : 1.5, "skor" :"", "mesafe" :""}
-
+    "hedefler": [
+        {"id": "hedef1",  "konum_x": 7,   "konum_y": 4,   "konum_z": 6,   "deger": 2, "basari_olasiligi": 0.5, "skor": "", "mesafe": ""},
+        {"id": "hedef2",  "konum_x": 6,   "konum_y": 0,   "konum_z": -5,  "deger": 3, "basari_olasiligi": 1.0, "skor": "", "mesafe": ""},
+        {"id": "hedef3",  "konum_x": -3,  "konum_y": 5,   "konum_z": 11,  "deger": 1, "basari_olasiligi": 1.5, "skor": "", "mesafe": ""},
+        {"id": "hedef4",  "konum_x": 10,  "konum_y": -2,  "konum_z": 3,   "deger": 4, "basari_olasiligi": 0.8, "skor": "", "mesafe": ""},
+        {"id": "hedef5",  "konum_x": -8,  "konum_y": -4,  "konum_z": 2,   "deger": 2, "basari_olasiligi": 0.6, "skor": "", "mesafe": ""},
+        {"id": "hedef6",  "konum_x": 12,  "konum_y": 7,   "konum_z": -1,  "deger": 5, "basari_olasiligi": 1.2, "skor": "", "mesafe": ""},
+        {"id": "hedef7",  "konum_x": -6,  "konum_y": 3,   "konum_z": 9,   "deger": 1, "basari_olasiligi": 1.0, "skor": "", "mesafe": ""},
+        {"id": "hedef8",  "konum_x": 4,   "konum_y": -9,  "konum_z": 7,   "deger": 3, "basari_olasiligi": 0.4, "skor": "", "mesafe": ""},
+        {"id": "hedef9",  "konum_x": 9,   "konum_y": 6,   "konum_z": -8,  "deger": 4, "basari_olasiligi": 0.9, "skor": "", "mesafe": ""},
+        {"id": "hedef10", "konum_x": -2,  "konum_y": -1,  "konum_z": 14,  "deger": 5, "basari_olasiligi": 1.3, "skor": "", "mesafe": ""}
     ]
 }

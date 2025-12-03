@@ -1,0 +1,7 @@
+{
+    "kriterler" : [
+        {"id" : "rüzgar", "hiz" : 5, "yon" : 90},
+        {"id" : "sensor_hatasi", "var_yok" : 1},
+        {"id" : "hiz", "deger" : 6} 
+    ]
+}
