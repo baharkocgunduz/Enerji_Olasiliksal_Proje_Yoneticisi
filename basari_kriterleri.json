@@ -1,7 +1,11 @@
 {
     "kriterler" : [
-        {"id" : "rüzgar", "hiz" : 5, "yon" : 90},
-        {"id" : "sensor_hatasi", "var_yok" : 1},
+        {"id" : "rüzgar", "hiz" : 5},
+        {"id" : "sensor_hatasi", "gurultu_alanlari": [
+            {"x_min": -10, "x_max": -5, "y_min": 0,  "y_max": 5,  "deger": 0.2},
+            {"x_min": -2,  "x_max":  2, "y_min": 6,  "y_max": 9,  "deger": 0.3},
+            {"x_min":  7,  "x_max": 10, "y_min": -3, "y_max": 1,  "deger": 0.4}
+        ]},
         {"id" : "hiz", "deger" : 6} 
     ]
 }

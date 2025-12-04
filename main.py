@@ -1,12 +1,7 @@
 '''
------
-başarı durumunu kontrol edden ayrı bir dosya açılacak
-başarı durumu için gerekli olan parametreler belirlenecek
-bu parametrelerin okunacağı bir dosya olabilir
-sonuçta başarı durumu hesaplama fonk tanımlanacak
-hesap yapılacak ve gerekli değer döndürülecek
-main.py de import edilecek ve fonksisyon çalıştırılıp sonucu başarı olasılığına yüklenecek
-rüzgar değişkenleri terminalden değiştirilebilir
+rüzgar için hız ve yön veriliyor.
+x,y,z konumları verilse buna göre konum alanı içine girince sensör devreye girse
+
 '''
 
 from json import load
@@ -40,9 +35,22 @@ def mesafe_hesaplama(x0, y0 , z0):
         mesafe = math.sqrt((x - x0)**2 + (y - y0)**2 + (z - z0)**2) # en kısa mesafe hesaplanıyor
         i["mesafe"] = float(format(mesafe, ".2f"))
 
+# alana girip girmediğini kontrol edecek
+# eğer alana giriyorsa o alan için belirlenen gürültü değeri alınacak
+# sonuçta döndürülecek 
+def g_alan(kriterler, x0, y0):
+    noise = 0
+    for i in kriterler:
+        if i["id"] == "sensor_hatasi":
+            gurultu_alanlari = i["gurultu_alanlari"]
+    for i in gurultu_alanlari:
+        if i["x_min"] < x0 < i["x_max"] and i["y_min"] < y0 < i["y_max"]:
+            noise = i["deger"]
+    return noise
+
 # basari_kriterleri içindeki listeyi alıp harcanacak enerji hesaplanıyor
 # kalan_enerji hesaplanıp return ediliyor
-def cevresel_etki(kriterler, kalan_enerji):
+def cevresel_etki(kriterler, kalan_enerji, x0, y0):
     for i in kriterler:
         gereken_enerji = 0
         if i["id"] == "ruzgar":
@@ -50,7 +58,8 @@ def cevresel_etki(kriterler, kalan_enerji):
         elif  i["id"] == "hiz":
             gereken_enerji = i["deger"]*hiz
         elif i["id"] == "sensor_hatasi":
-            gereken_enerji = i["var_yok"]*sensor
+            deger = g_alan(kriterler, x0, y0)
+            gereken_enerji = deger*sensor
         kalan_enerji -= gereken_enerji
     return kalan_enerji
 
@@ -78,7 +87,7 @@ def skor(liste, toplam_enerji, enerji_katsayisi):
                 z0 = i["konum_z"]
                 mesafe_hesaplama(x0, y0, z0)
                 kalan_enerji -= gereken_enerji
-                kalan_enerji -= cevresel_etki(kriterler, kalan_enerji)
+                kalan_enerji -= cevresel_etki(kriterler, kalan_enerji, x0, y0)
     return secilen, kalan_enerji
 
 
